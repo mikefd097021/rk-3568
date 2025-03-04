@@ -8,6 +8,10 @@
 
 1. 如下圖所示，找到 rootfs 所在區塊（`/dev/sdd6`）
 
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/1.png?raw=true" alt="rootfs區塊位置">
+   </div>
+   
 2. 確認分區掛載狀態
    ```bash
    mount | grep /dev/sdd6
