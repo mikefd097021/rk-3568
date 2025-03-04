@@ -21,15 +21,31 @@
    umount /dev/sdd6
    ```
 
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/2.png?raw=true" alt="操作截圖">
+   </div>
+   
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/3.png?raw=true" alt="操作截圖">
+   </div>
+
 3. 使用 dd 命令將映像檔寫入對應區塊：
    ```bash
    dd if=<映像檔路徑> of=/dev/sdd6 bs=4M status=progress
    ```
 
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/4.png?raw=true" alt="操作截圖">
+   </div>
+
 4. 建立掛載用目錄：
    ```bash
    mkdir -p sd_rootfs
    ```
+
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/5.png?raw=true" alt="操作截圖">
+   </div>
 
 5. 將 rootfs 分區掛載到指定目錄：
    ```bash
@@ -41,10 +57,18 @@
    resize2fs /dev/sdd6
    ```
 
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/6.png?raw=true" alt="操作截圖">
+   </div>
+
 7. 驗證分區大小：
    ```bash
    df -h /dev/sdd6
    ```
+
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/7.png?raw=true" alt="操作截圖">
+   </div>
 
 ## 透過sd卡啟動
 
