@@ -84,3 +84,18 @@
 - 建議在操作前備份重要數據
 
 ## 下載
+
+### 系統映像檔
+| 項目 | 內容 |
+|------|------|
+| 檔案名稱 | sdupdate.img |
+| SHA256 校驗碼 | e5952745f70e8ade64298275c975e2bf3d6994f10b319bbc3efb50883d15f0f3 |
+| 下載連結 | 請連絡相關人員索取 |
+
+### 寫入工具
+| 項目 | 內容 |
+|------|------|
+| 檔案名稱 | SDDiskTool_v1.69.rar |
+| 下載連結 | [Google Drive](https://drive.google.com/file/d/1r7RXZHWlw9ci0WIcBxocYn9qbAhL48nu/view?usp=sharing) |
+| 密碼 | 請連絡相關人員索取 |
+
