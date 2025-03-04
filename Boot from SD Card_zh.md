@@ -16,14 +16,15 @@
    ```bash
    mount | grep /dev/sdd6
    ```
-   如果已掛載，則執行以下命令卸載：
-   ```bash
-   umount /dev/sdd6
-   ```
 
    <div align="center">
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/2.png?raw=true" alt="操作截圖">
    </div>
+
+   如果已掛載，則執行以下命令卸載：
+   ```bash
+   umount /dev/sdd6
+   ```
    
    <div align="center">
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/3.png?raw=true" alt="操作截圖">
