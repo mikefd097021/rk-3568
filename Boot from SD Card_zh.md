@@ -26,7 +26,7 @@
 1. 啟動 SDDiskTool 工具程式
    > 💡 第一次使用時可能需要管理員權限
 
-   <div align="center">
+   <div align="left">
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/01.png?raw=true" alt="啟動 SDDiskTool">
    </div>
 

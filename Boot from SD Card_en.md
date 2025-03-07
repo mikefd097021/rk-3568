@@ -26,7 +26,7 @@
 1. Launch SDDiskTool
    > 💡 You may need administrator privileges when running SDDiskTool for the first time.
 
-   <div align="center">
+   <div align="left">
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/01.png?raw=true" alt="Launch SDDiskTool">
    </div>
 
