@@ -14,8 +14,6 @@
   - [System Image](#system-image)
   - [Writing Tools](#writing-tools)
 
-# SD Card Boot Guide
-
 ## Creating a Bootable SD Card
 
 ### Preparation
@@ -36,7 +34,7 @@
    > ⚠️ Double-check that you have selected the correct SD card, as selecting the wrong device could lead to data loss on other storage devices.
 
 3. Enable the SD Boot function
-   > This step is crucial as it makes the SD card bootable
+   > This step is crucial because it makes the SD card bootable.
 
    <div align="center">
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/02.png?raw=true" alt="Enable SD Boot">
@@ -75,7 +73,7 @@
 ### Steps
 
 1. Locate the rootfs partition (`/dev/sdd6`)
-   > Please refer to the location shown in the image below
+   > Refer to the location shown in the image below.
 
    <div align="center">
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/1.png?raw=true" alt="rootfs partition location">
