@@ -1,11 +1,27 @@
 # SD Card 開機指南
 
+## 目錄
+- [製作可開機sd卡](#製作可開機sd卡)
+  - [準備工作](#準備工作)
+  - [操作步驟](#操作步驟)
+  - [注意事項](#注意事項)
+- [寫入與調整 rootfs](#寫入與調整-rootfs)
+  - [操作步驟](#操作步驟-1)
+  - [注意事項](#注意事項-1)
+- [透過 SD 卡開機](#透過-sd-卡開機)
+  - [操作步驟](#操作步驟-2)
+- [下載資源](#下載資源)
+  - [系統映像檔](#系統映像檔)
+  - [寫入工具](#寫入工具)
+
+# SD Card 開機指南
+
 ## 製作可開機sd卡
 
 ### 準備工作
-- 請確保已下載 SDDiskTool 工具和系統映像檔
-- 準備一張 SD 卡（建議容量 >= 32GB）
-- 將 SD 卡接入電腦
+1. 請確保已下載 SDDiskTool 工具和系統映像檔
+2. 準備一張 SD 卡（建議容量 >= 32GB）
+3. 將 SD 卡接入電腦
 
 ### 操作步驟
 
@@ -30,11 +46,11 @@
    > 點選 Firmware 欄位旁的按鈕，選擇系統映像檔（sdupdate.img）
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/03.png?raw=true" alt="選擇韌體位置">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/03.png?raw=true" alt="選擇韌體位置" width="600">
    </div>
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/04.png?raw=true" alt="載入韌體檔案">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/04.png?raw=true" alt="載入韌體檔案" width="600">
    </div>
 
 5. 開始製作開機卡
@@ -47,22 +63,26 @@
    </div>
 
 ### 注意事項
-- 製作過程會清除 SD 卡中的所有資料，請提前備份重要資料
-- 若製作失敗，請檢查：
-  1. SD 卡是否正確插入
-  2. 選擇的裝置是否正確
-  3. 韌體檔案是否完整
-  4. 嘗試使用管理員權限執行
+1. 製作過程會清除 SD 卡中的所有資料，請提前備份重要資料
+2. 若製作失敗，請檢查：
+   - SD 卡是否正確插入
+   - 選擇的裝置是否正確
+   - 韌體檔案是否完整
+   - 嘗試使用管理員權限執行
 
-## 寫入與調整 rootfs 步驟
+## 寫入與調整 rootfs
 
-1. 如下圖所示，找到 rootfs 所在區塊（`/dev/sdd6`）
+### 操作步驟
+
+1. 找到 rootfs 所在區塊（`/dev/sdd6`）
+   > 請參考下圖位置
 
    <div align="center">
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/1.png?raw=true" alt="rootfs區塊位置">
    </div>
    
 2. 確認分區掛載狀態
+   > 執行以下命令檢查：
    ```bash
    mount | grep /dev/sdd6
    ```
@@ -71,7 +91,7 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/2.png?raw=true" alt="操作截圖">
    </div>
 
-   如果已掛載，則執行以下命令卸載：
+   > 如果已掛載，執行以下命令卸載：
    ```bash
    umount /dev/sdd6
    ```
@@ -80,7 +100,8 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/3.png?raw=true" alt="操作截圖">
    </div>
 
-3. 使用 dd 命令將映像檔寫入對應區塊：
+3. 寫入映像檔至對應區塊
+   > 使用 dd 命令：
    ```bash
    dd if=<映像檔路徑> of=/dev/sdd6 bs=4M status=progress
    ```
@@ -89,7 +110,8 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/4.png?raw=true" alt="操作截圖">
    </div>
 
-4. 建立掛載用目錄：
+4. 建立掛載用目錄
+   > 執行以下命令：
    ```bash
    mkdir -p sd_rootfs
    ```
@@ -98,12 +120,14 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/5.png?raw=true" alt="操作截圖">
    </div>
 
-5. 將 rootfs 分區掛載到指定目錄：
+5. 掛載 rootfs 分區
+   > 執行以下命令：
    ```bash
    mount /dev/sdd6 sd_rootfs
    ```
 
-6. 調整 rootfs 分區大小：
+6. 調整分區大小
+   > 執行以下命令：
    ```bash
    resize2fs /dev/sdd6
    ```
@@ -112,7 +136,8 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/6.png?raw=true" alt="操作截圖">
    </div>
 
-7. 驗證分區大小：
+7. 驗證分區大小
+   > 執行以下命令：
    ```bash
    df -h /dev/sdd6
    ```
@@ -122,19 +147,27 @@
    </div>
 
 ### 注意事項
-- 請確保有足夠的權限執行以上命令
-- 操作前請確認設備名稱（如 `/dev/sdd6`）是否正確
-- 建議在操作前備份重要數據
+1. 請確保有足夠的權限執行以上命令
+2. 操作前請確認設備名稱（如 `/dev/sdd6`）是否正確
+3. 建議在操作前備份重要數據
 
-## 透過sd卡啟動
+## 透過 SD 卡開機
 
-1. 插入可開機sd卡
+### 操作步驟
 
-2. 如下圖所示，按住指示按鈕後開機
+1. 插入可開機 SD 卡
 
-## 下載
+2. 按住指示按鈕後開機
+   > 請參考下圖標示位置進行操作
+
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/001.png?raw=true" alt="操作截圖">
+   </div>
+
+## 下載資源
 
 ### 系統映像檔
+
 | 項目 | 內容 |
 |------|------|
 | 檔案名稱 | sdupdate.img |
@@ -142,6 +175,7 @@
 | 下載連結 | 請連絡相關人員索取 |
 
 ### 寫入工具
+
 | 項目 | 內容 |
 |------|------|
 | 檔案名稱 | SDDiskTool_v1.69.rar |
