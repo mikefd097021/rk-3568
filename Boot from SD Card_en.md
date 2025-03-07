@@ -5,7 +5,7 @@
   - [Preparation](#preparation)
   - [Steps](#steps)
   - [Notes](#notes)
-- [Flashing and Configuring the Root Filesystem](#flashing-and-configuring-root-filesystem)
+- [Flashing and Configuring the Root Filesystem](#flashing-and-configuring-the-root-filesystem)
   - [Steps](#steps-1)
   - [Notes](#notes-1)
 - [Booting from SD Card](#booting-from-sd-card)
