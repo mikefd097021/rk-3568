@@ -161,7 +161,7 @@
    > 請參考下圖標示位置進行操作
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/001.png?raw=true" alt="操作截圖">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/001.png?raw=true" alt="操作截圖" width="600">
    </div>
 
 ## 下載資源
