@@ -18,7 +18,7 @@
   - [Steps](#steps-2)
 - [Download Resources](#download-resources)
   - [System Image](#system-image)
-  - [Writing Tools](#writing-tools)
+  - [Flash Tools](#flash-tools)
 
 ## <span style="border-bottom: 3px solid #2196F3; padding-bottom: 5px;">Creating a Bootable SD Card</span>
 
@@ -183,7 +183,7 @@
 | SHA256 | e5952745f70e8ade64298275c975e2bf3d6994f10b319bbc3efb50883d15f0f3 |
 | Download Link | Please contact the relevant personnel to obtain it. |
 
-### <span style="color: #1976D2;">🔧 Writing Tools</span>
+### <span style="color: #1976D2;">🔧 Flash Tools</span>
 
 | Item | Content |
 |------|---------|
