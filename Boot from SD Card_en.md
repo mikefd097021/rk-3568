@@ -1,11 +1,8 @@
 <div align="center">
   <div style="background: linear-gradient(45deg, #000428, #004e92); padding: 40px; border-radius: 10px; margin-bottom: 30px;">
-    <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 3em; margin: 0;">
+    <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 3em; margin: 0; padding-bottom: 20px; background: url('https://github.com/mikefd097021/rk-3568/blob/main/res/b002.png?raw=true') bottom center/100% 5px no-repeat;">
       🔌 SD Card Boot Guide 💾
     </h1>
-    <div style="margin: 20px auto;">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/b002.png?raw=true" alt="decorative line" style="width: 80%; height: 20px; object-fit: cover;">
-    </div>
   </div>
 </div>
 
