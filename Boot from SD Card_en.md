@@ -31,13 +31,13 @@
    </div>
 
 2. Select the SD card device
-   > ⚠️ Double-check that you have selected the correct SD card, as selecting the wrong device could lead to data loss on other storage devices.
+   > ⚠️ WARNING: Double-check that you have selected the correct SD card. Selecting the wrong device could lead to permanent data loss on other storage devices.
 
 3. Enable the SD Boot function
    > This step is crucial because it makes the SD card bootable.
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/02.png?raw=true" alt="Enable SD Boot">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/02.png?raw=true" alt="Enable SD Boot option in SDDiskTool">
    </div>
 
 4. Load the firmware file
@@ -74,9 +74,10 @@
 
 1. Locate the rootfs partition (`/dev/sdd6`)
    > Refer to the location shown in the image below.
+   > Note: Your device name might be different. Please verify the correct device name on your system.
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/1.png?raw=true" alt="rootfs partition location">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/1.png?raw=true" alt="Identifying rootfs partition in system">
    </div>
    
 2. Check partition mount status
@@ -86,80 +87,84 @@
    ```
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/2.png?raw=true" alt="Operation screenshot">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/2.png?raw=true" alt="Checking mount status of rootfs partition">
    </div>
 
-   > If mounted, unmount using:
+   > If the partition is mounted, unmount it using:
    ```bash
    umount /dev/sdd6
    ```
    
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/3.png?raw=true" alt="Operation screenshot">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/3.png?raw=true" alt="Unmounting rootfs partition">
    </div>
 
 3. Flash the system image onto the rootfs partition
-   > Use the dd command:
+   > Replace <image_path> with the actual path to your system image file:
    ```bash
    dd if=<image_path> of=/dev/sdd6 bs=4M status=progress
    ```
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/4.png?raw=true" alt="Operation screenshot">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/4.png?raw=true" alt="Flashing system image using dd command">
    </div>
 
 4. Create a mount directory
-   > Execute:
+   > Create a directory to mount the rootfs partition:
    ```bash
    mkdir -p sd_rootfs
    ```
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/5.png?raw=true" alt="Operation screenshot">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/5.png?raw=true" alt="Creating mount directory for rootfs">
    </div>
 
 5. Mount the rootfs partition
-   > Execute:
+   > Mount the partition to verify and configure the filesystem:
    ```bash
    mount /dev/sdd6 sd_rootfs
    ```
 
 6. Resize the partition
-   > Execute:
+   > Expand the filesystem to use all available space on the partition:
    ```bash
    resize2fs /dev/sdd6
    ```
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/6.png?raw=true" alt="Operation screenshot">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/6.png?raw=true" alt="Resizing rootfs partition">
    </div>
 
 7. Check the partition size after resizing
-   > Execute:
+   > Verify the new partition size:
    ```bash
    df -h /dev/sdd6
    ```
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/7.png?raw=true" alt="Operation screenshot">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/7.png?raw=true" alt="Checking final partition size">
    </div>
 
 ### Notes
-1. Ensure you have sufficient permissions to execute these commands
-2. Verify the device name (e.g., `/dev/sdd6`) is correct before proceeding
-3. Backing up important data before operation is recommended
+1. Ensure you have root/administrator privileges to execute these commands
+2. Always verify the device name (e.g., `/dev/sdd6`) matches your system
+3. Back up any important data before proceeding with these operations
+4. If you encounter any errors:
+   - Verify all commands are executed with proper permissions
+   - Check that the SD card is properly connected
+   - Ensure the system image file is not corrupted
 
 ## Booting from SD Card
 
 ### Steps
 
-1. Insert the bootable SD card
+1. Insert the bootable SD card into the device's SD card slot
 
 2. Hold the indicated button while powering on
    > Please refer to the highlighted area in the image below.
 
    <div align="center">
-      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/001.png?raw=true" alt="Operation screenshot" width="600">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/001.png?raw=true" alt="Boot mode button location on device" width="600">
    </div>
 
 ## Download Resources
