@@ -43,7 +43,7 @@
    </div>
 
 4. 載入韌體檔案
-   > 點選 Firmware 欄位旁的按鈕，選擇系統映像檔（sdupdate.img）
+   > 點選 Firmware 按鈕，選擇系統映像檔（sdupdate.img）
 
    <div align="center">
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/03.png?raw=true" alt="選擇韌體位置" width="600">
@@ -171,7 +171,7 @@
 | 項目 | 內容 |
 |------|------|
 | 檔案名稱 | sdupdate.img |
-| SHA256 校驗碼 | e5952745f70e8ade64298275c975e2bf3d6994f10b319bbc3efb50883d15f0f3 |
+| SHA256 | e5952745f70e8ade64298275c975e2bf3d6994f10b319bbc3efb50883d15f0f3 |
 | 下載連結 | 請連絡相關人員索取 |
 
 ### 寫入工具
