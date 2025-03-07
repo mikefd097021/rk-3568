@@ -5,7 +5,7 @@
   - [Preparation](#preparation)
   - [Steps](#steps)
   - [Notes](#notes)
-- [Flashing and Configuring the Root Filesystem](#writing-and-adjusting-rootfs)
+- [Flashing and Configuring the Root Filesystem](#flashing-and-configuring-root-filesystem)
   - [Steps](#steps-1)
   - [Notes](#notes-1)
 - [Booting from SD Card](#booting-from-sd-card)
@@ -54,7 +54,7 @@
    </div>
 
 5. Start creating the boot card
-   > After confirming all settings, click Create to begin
+   > After confirming all settings, click Create to begin.
    > 
    > ⚠️ Do not remove the SD card during the process
 
@@ -63,7 +63,7 @@
    </div>
 
 ### Notes
-1. The creation process will erase all data on the SD card, please backup important data beforehand
+1. The creation process will erase all data on the SD card. Ensure that you back up important data beforehand.
 2. If the creation process fails, check the following:
    - Ensure the SD card is properly inserted.
    - Verify that you have selected the correct device.
@@ -110,7 +110,7 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/4.png?raw=true" alt="Operation screenshot">
    </div>
 
-4. Create mount directory
+4. Create a mount directory
    > Execute:
    ```bash
    mkdir -p sd_rootfs
@@ -172,7 +172,7 @@
 |------|---------|
 | File Name | sdupdate.img |
 | SHA256 | e5952745f70e8ade64298275c975e2bf3d6994f10b319bbc3efb50883d15f0f3 |
-| Download Link | Please contact relevant personnel |
+| Download Link | Please contact the relevant personnel to obtain it. |
 
 ### Writing Tools
 
@@ -180,4 +180,4 @@
 |------|---------|
 | File Name | SDDiskTool_v1.69.rar |
 | Download Link | [Google Drive](https://drive.google.com/file/d/1r7RXZHWlw9ci0WIcBxocYn9qbAhL48nu/view?usp=sharing) |
-| Password | Please contact relevant personnel |
+| Password | Please contact the relevant personnel to obtain it. |
