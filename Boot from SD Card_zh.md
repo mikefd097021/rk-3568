@@ -2,7 +2,57 @@
 
 ## 製作可開機sd卡
 
+### 準備工作
+- 請確保已下載 SDDiskTool 工具和系統映像檔
+- 準備一張 SD 卡（建議容量 >= 32GB）
+- 將 SD 卡接入電腦
 
+### 操作步驟
+
+1. 啟動 SDDiskTool 工具程式
+   > 💡 第一次使用時可能需要管理員權限
+
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/01.png?raw=true" alt="啟動 SDDiskTool">
+   </div>
+
+2. 選擇 SD 卡裝置
+   > ⚠️ 請仔細確認選擇的是正確的 SD 卡裝置，避免損壞其他儲存裝置
+
+3. 勾選 SD Boot 功能
+   > 這個步驟很重要，它將使 SD 卡變為可開機狀態
+
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/02.png?raw=true" alt="啟用 SD Boot">
+   </div>
+
+4. 載入韌體檔案
+   > 點選 Firmware 欄位旁的按鈕，選擇系統映像檔（sdupdate.img）
+
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/03.png?raw=true" alt="選擇韌體位置">
+   </div>
+
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/04.png?raw=true" alt="載入韌體檔案">
+   </div>
+
+5. 開始製作開機卡
+   > 確認所有設定後，點選 Create 開始製作
+   > 
+   > ⚠️ 製作過程中請勿移除 SD 卡
+
+   <div align="center">
+      <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/05.png?raw=true" alt="開始製作">
+   </div>
+
+### 注意事項
+- 製作過程會清除 SD 卡中的所有資料，請提前備份重要資料
+- 若製作失敗，請檢查：
+  1. SD 卡是否正確插入
+  2. 選擇的裝置是否正確
+  3. 韌體檔案是否完整
+  4. 嘗試使用管理員權限執行
 
 ## 寫入與調整 rootfs 步驟
 
@@ -71,17 +121,16 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/7.png?raw=true" alt="操作截圖">
    </div>
 
+### 注意事項
+- 請確保有足夠的權限執行以上命令
+- 操作前請確認設備名稱（如 `/dev/sdd6`）是否正確
+- 建議在操作前備份重要數據
+
 ## 透過sd卡啟動
 
 1. 插入可開機sd卡
 
 2. 如下圖所示，按住指示按鈕後開機
-
-
-## 注意事項
-- 請確保有足夠的權限執行以上命令
-- 操作前請確認設備名稱（如 `/dev/sdd6`）是否正確
-- 建議在操作前備份重要數據
 
 ## 下載
 
