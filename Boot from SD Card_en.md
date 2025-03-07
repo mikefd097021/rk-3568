@@ -1,6 +1,13 @@
-# SD Card Boot Guide
+<div align="center">
+  <div style="background: linear-gradient(45deg, #000428, #004e92); padding: 40px; border-radius: 10px; margin-bottom: 30px;">
+    <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 3em; margin: 0;">
+      🔌 SD Card Boot Guide 💾
+    </h1>
+    <div style="background: url('https://raw.githubusercontent.com/mikefd097021/rk-3568/main/res/circuit-pattern.png') center/cover; height: 5px; width: 80%; margin: 20px auto;"></div>
+  </div>
+</div>
 
-## Table of Contents
+## <span style="background: linear-gradient(to right, #00b4db, #0083b0); -webkit-background-clip: text; color: transparent;">Table of Contents</span>
 - [Creating a Bootable SD Card](#creating-a-bootable-sd-card)
   - [Preparation](#preparation)
   - [Steps](#steps)
@@ -14,14 +21,14 @@
   - [System Image](#system-image)
   - [Writing Tools](#writing-tools)
 
-## Creating a Bootable SD Card
+## <span style="border-bottom: 3px solid #2196F3; padding-bottom: 5px;">Creating a Bootable SD Card</span>
 
-### Preparation
+### <span style="color: #1976D2;">🔧 Preparation</span>
 1. Ensure you have downloaded the SDDiskTool and system image
 2. Prepare an SD card (recommended capacity >= 32GB)
 3. Connect the SD card to your computer
 
-### Steps
+### <span style="color: #1976D2;">📝 Steps</span>
 
 1. Launch SDDiskTool
    > 💡 You may need administrator privileges when running SDDiskTool for the first time.
@@ -60,7 +67,7 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/05.png?raw=true" alt="Start creation">
    </div>
 
-### Notes
+### <span style="color: #1976D2;">📌 Notes</span>
 1. The creation process will erase all data on the SD card. Ensure that you back up important data beforehand.
 2. If the creation process fails, check the following:
    - Ensure the SD card is properly inserted.
@@ -68,9 +75,9 @@
    - Confirm that the firmware file is complete and not corrupted.
    - Try running SDDiskTool with administrator privileges.
 
-## Flashing and Configuring the Root Filesystem
+## <span style="border-bottom: 3px solid #2196F3; padding-bottom: 5px;">Flashing and Configuring the Root Filesystem</span>
 
-### Steps
+### <span style="color: #1976D2;">📝 Steps</span>
 
 1. Locate the rootfs partition (`/dev/sdd6`)
    > Refer to the location shown in the image below.
@@ -145,7 +152,7 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/7.png?raw=true" alt="Checking final partition size">
    </div>
 
-### Notes
+### <span style="color: #1976D2;">📌 Notes</span>
 1. Ensure you have root/administrator privileges to execute these commands
 2. Always verify the device name (e.g., `/dev/sdd6`) matches your system
 3. Back up any important data before proceeding with these operations
@@ -154,9 +161,9 @@
    - Check that the SD card is properly connected
    - Ensure the system image file is not corrupted
 
-## Booting from SD Card
+## <span style="border-bottom: 3px solid #2196F3; padding-bottom: 5px;">Booting from SD Card</span>
 
-### Steps
+### <span style="color: #1976D2;">📝 Steps</span>
 
 1. Insert the bootable SD card into the device's SD card slot
 
@@ -167,9 +174,9 @@
       <img src="https://github.com/mikefd097021/rk-3568/blob/main/res/001.png?raw=true" alt="Boot mode button location on device" width="600">
    </div>
 
-## Download Resources
+## <span style="border-bottom: 3px solid #2196F3; padding-bottom: 5px;">Download Resources</span>
 
-### System Image
+### <span style="color: #1976D2;">💿 System Image</span>
 
 | Item | Content |
 |------|---------|
@@ -177,7 +184,7 @@
 | SHA256 | e5952745f70e8ade64298275c975e2bf3d6994f10b319bbc3efb50883d15f0f3 |
 | Download Link | Please contact the relevant personnel to obtain it. |
 
-### Writing Tools
+### <span style="color: #1976D2;">🔧 Writing Tools</span>
 
 | Item | Content |
 |------|---------|
