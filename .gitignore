@@ -1,2 +1,5 @@
 # Exclude mike-note.txt from git
 mike-note.txt
+
+# Private folder for non-git files
+private/
