@@ -3,7 +3,7 @@
     <h1 style="color: white; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); font-size: 3em; margin: 0;">
       🔌 SD Card Boot Guide 💾
     </h1>
-    <div style="background: url('https://raw.githubusercontent.com/mikefd097021/rk-3568/main/res/b001.png') center/cover; height: 5px; width: 80%; margin: 20px auto;"></div>
+    <div style="background: url('https://github.com/mikefd097021/rk-3568/blob/main/res/b001.png?raw=true') center/cover; height: 5px; width: 80%; margin: 20px auto;"></div>
   </div>
 </div>
 
